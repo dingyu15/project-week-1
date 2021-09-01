@@ -1,11 +1,10 @@
 .content-container {
     border-style: solid;
     margin: 60px auto;
-    max-width: 60%;
+    max-width: 50%;
   }
 
 .title {
-    display: flex;
     border-style: dashed;
     margin: 10px;
     padding: 5px;
@@ -14,7 +13,7 @@
     font-size: 3rem;
 }
 
-.top-section {
+.input-item-section {
     display: flex;
     flex-wrap: wrap;
     border-style: dashed;
@@ -22,22 +21,22 @@
     padding: 5px;
 }
 
-.enterTask{
-    flex: 100%;
+.itemTextbox{
+    width: 100%;
     margin: 5px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.addItem{
-    flex: 0 0 130px;
+.addButton{
+    width: 130px;
     margin: 5px;
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 8px;
 }
 
-.list-item {
+.list-item-section {
     border-style: dashed;
     flex: 100%;
     height: 200px;
@@ -45,4 +44,15 @@
     padding: 5px;
 }
 
-
+@media (max-width: 300px) 
+{
+    .addButton 
+    { 
+        flex: 100%;
+        width: 100%;
+    }
+    .title
+    {
+        overflow: auto; 
+    }
+}
