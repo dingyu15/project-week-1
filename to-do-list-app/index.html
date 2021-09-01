@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./src/index.js"></script>
 </head>
 <body>
 <div class="content-container">
     <h1 class="title">To-do List</h1>
-    <div class="input-item-section">
-        <input class="itemTextbox" placeholder="Enter a task">
-        <input class="addButton" type="button" value="Add item" />
+    <div class="input-task-section">
+        <input class="taskTextbox" id="task" placeholder="Enter a task">
+        <input class="addButton" type="button" value="Add item" onclick="addItem()"/>
     </div>
     <div class="list-item-section">
-
     </div>
 </div>
 
