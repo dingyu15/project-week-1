@@ -58,10 +58,32 @@
 
 #itemList
 {
-    /* background-color: white; */
-    /* border-radius: 15px; */
-    padding: 10px 15px;
-    /* margin: 8px 0; */
+    margin: 0;
+    padding: 0;
+}
+
+#itemList li 
+{
+    background-color: #E6E9F0;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    font-size: 20px;
+}
+
+.close 
+{
+    background-color: #4DA8DA;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    color: white;
+}
+
+.close:hover 
+{
+    background-color: green;
 }
 
 @media (max-width: 300px) 

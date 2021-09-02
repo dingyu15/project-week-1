@@ -1,15 +1,21 @@
 function addItem()
 {
-    if(document.getElementById('taskTextbox').value == "")
+    if(document.getElementById('taskTextbox').value == '')
     {
         alert('Please enter a task.');
     }
     else
     {
+        const span = document.createElement('span');
+        span.className = 'close';
+        const close = document.createTextNode('\u00D7');
+        span.appendChild(close);
+        
         const item = document.createElement('li');
         item.innerHTML = document.getElementById('taskTextbox').value;
         item.onclick = removeItem;
         document.getElementById('itemList').appendChild(item);
+        item.appendChild(span);
         document.getElementById('taskTextbox').value = '';
         document.getElementById('taskTextbox').focus();
     }
