@@ -1,3 +1,10 @@
+window.addEventListener('load', (event) => {
+    if(localStorage.todoList)
+    {
+    loadItem();
+    }
+  });
+
 function addItem()
 {
     if(document.getElementById('taskTextbox').value == '')
@@ -13,17 +20,40 @@ function addItem()
         
         const item = document.createElement('li');
         item.innerHTML = document.getElementById('taskTextbox').value;
-        item.onclick = removeItem;
         document.getElementById('itemList').appendChild(item);
         item.appendChild(span);
+        item.onclick = removeItem;
+
         document.getElementById('taskTextbox').value = '';
         document.getElementById('taskTextbox').focus();
+
+        saveItem();
     }
 }
 
 function removeItem()
 {
     document.getElementById('itemList').removeChild(this);
+    saveItem();
+}
+
+function saveItem()
+{
+    localStorage.todoList = document.getElementById('itemList').innerHTML;
+}
+
+function loadItem()
+{
+    document.getElementById('itemList').innerHTML = localStorage.todoList; 
+}
+
+function loadItem()
+{
+    document.getElementById('itemList').innerHTML = localStorage.todoList; 
+    for (let i = 0; i < itemList.children.length; i++)
+    {
+        itemList.children[i].onclick = removeItem;
+    }
 }
 
 
